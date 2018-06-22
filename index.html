@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyBox</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/jquery-ui-dist/jquery-ui.min.css">
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+	<style type="text/css">
+		html, body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #424242;
+
+		}
+
+		.test-viewport {
+			border: 1px solid black;
+			min-width: 100px;
+			min-height: 100px;
+			background: #fff;
+			position: absolute;
+		}
+
+		.test-viewport .easy {
+			border: 1px dotted black;
+		}
+	</style>
+</head>
+<body>
+	<div class="test-viewport ui-widget-content">
+		<div 
+			class="scene easy"
+			easy:width="100%"
+			easy:height="100px"
+		>
+
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(".test-viewport").resizable({
+			resize : function(evt, ui){
+				console.log(ui.size);
+			}
+		});
+	</script>
+	<script data-main="main" src="node_modules/quire/quire.js"></script>
+</body>
+</html>

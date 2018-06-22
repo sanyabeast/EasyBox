@@ -1,0 +1,12 @@
+{
+  "name": "EasyBox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "sanyabeast <a.gvrnsk@gmail.com>",
+  "license": "MIT",
+  "dependencies" : {
+  	"jquery" : "latest",
+  	"jquery-ui-dist" : "latest",
+  	"quire" : "git://github.com/sanyabeast/quire.git"
+  }
+}
