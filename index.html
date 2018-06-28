@@ -27,6 +27,7 @@
 
 		.test-viewport .easy {
 			border: 1px dotted black;
+			position: absolute;
 		}
 	</style>
 </head>
@@ -37,16 +38,15 @@
 			easy:width="100%"
 			easy:height="100px"
 		>
-
+			<div
+				class="easy"
+				easy:width="100px"
+				easy:height="100%"
+			>
+				
+			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$(".test-viewport").resizable({
-			resize : function(evt, ui){
-				console.log(ui.size);
-			}
-		});
-	</script>
 	<script data-main="main" src="node_modules/quire/quire.js"></script>
 </body>
 </html>
